@@ -1,0 +1,8 @@
+snippet note_md "Markdown Note"
+---
+title: ${1:`!v notes#noteTitle(expand('%'))`}
+date: ${2:`date +'%A %B %d'`}
+tags: ' ${3::optional:tags:} '
+---
+
+endsnippet
