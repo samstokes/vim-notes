@@ -3,6 +3,10 @@ function! notes#newNoteFilename(...) abort
   return join([prefix] + a:000, '-') . '.md'
 endfunction
 
+function! notes#currentWeekFilename() abort
+  return vimwiki#path#wikify_path(strftime('diary/week-%V.md'))
+endfunction
+
 function! notes#noteId(filename) abort
   let [id; rest] = s:parseNoteFilename(a:filename)
   return id
