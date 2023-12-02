@@ -4,7 +4,7 @@ function! notes#newNoteFilename(...) abort
 endfunction
 
 function! notes#currentWeekFilename() abort
-  return vimwiki#path#wikify_path(strftime('diary/week-%V.md'))
+  return vimwiki#path#wikify_path(strftime('diary/week-%Y-%V.md'))
 endfunction
 
 function! notes#noteId(filename) abort
