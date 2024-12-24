@@ -4,4 +4,4 @@ command! -nargs=0 EditCurrentWeek execute '<mods> edit ' . notes#currentWeekFile
 command! -nargs=0 SplitCurrentWeek execute '<mods> split ' . notes#currentWeekFilename()
 
 nnoremap <Leader>n :vertical SplitNewNote 
-nnoremap <Leader>k :vertical SplitCurrentWeek<CR>
+autocmd FileType vimwiki nnoremap <Leader>k :vertical SplitCurrentWeek<CR>
